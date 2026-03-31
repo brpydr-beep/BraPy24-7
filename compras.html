@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bra-PY 24/7 | Compras no Paraguai - Produtos mais baratos e lojas em CDE</title>
+    <meta name="description" content="Descubra os 10 produtos mais baratos no Paraguai, vale a pena comprar iPhone e as melhores lojas de eletrônicos em Ciudad del Este.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-content">
+        <div class="logo">
+            <h1>Bra- <span>PY 24/7</span></h1>
+            <p>Compras · Promoções · Dicas</p>
+        </div>
+        
+        <button class="hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav desktop-nav">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="cambio.html" class="nav-link">Câmbio</a>
+            <a href="compras.html" class="nav-link active">Compras</a>
+            <a href="pets.html" class="nav-link">Pets</a>
+            <a href="servicos.html" class="nav-link">Serviços</a>
+            <a href="blog/index.html" class="nav-link">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <h3>Bra-PY 24/7</h3>
+        <button class="close-menu" id="closeMenuBtn">&times;</button>
+    </div>
+    <nav class="mobile-nav">
+        <a href="index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="cambio.html"><i class="fas fa-dollar-sign"></i> Câmbio</a>
+        <a href="compras.html"><i class="fas fa-shopping-bag"></i> Compras</a>
+        <a href="pets.html"><i class="fas fa-paw"></i> Pets</a>
+        <a href="servicos.html"><i class="fas fa-concierge-bell"></i> Serviços</a>
+        <a href="blog/index.html"><i class="fas fa-blog"></i> Blog</a>
+        <a href="https://wa.me/595981234567" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </nav>
+</div>
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<main>
+    <div class="container">
+        <h2 class="section-title">🛍️ Guia de Compras no Paraguai</h2>
+        
+        <div class="grid-artigos">
+            <div class="artigo-card">
+                <h3>🔥 Top 10 produtos mais baratos no Paraguai</h3>
+                <p>Perfumes, eletrônicos, bebidas, roupas e muito mais com preços até 60% mais baratos.</p>
+                <button class="btn-whatsapp" onclick="gerarLead('Top10 produtos')">Quero a lista via WhatsApp</button>
+            </div>
+            <div class="artigo-card">
+                <h3>📱 Vale a pena comprar iPhone no Paraguai?</h3>
+                <p>Comparativo iPhone 15/16 vs Brasil, economia real de até R$ 3.000.</p>
+                <button class="btn-lead" onclick="gerarLead('iPhone Paraguai')">Consultar preço hoje</button>
+            </div>
+            <div class="artigo-card">
+                <h3>🏬 Melhores lojas de eletrônicos em Ciudad del Este</h3>
+                <p>Cell Shop, Nissei, Mega Eletrônicos, dicas de garantia e produtos originais.</p>
+                <button class="btn-lead" onclick="gerarLead('Lojas confiáveis')">Contato com lojista</button>
+            </div>
+        </div>
+
+        <div class="ad-space">📢 Anuncie sua loja aqui - alcance milhares de compradores</div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Bra-PY 24/7 - Melhores preços e dicas de compras no Paraguai</p>
+        <p><small><i class="fab fa-whatsapp"></i> Dúvidas? Fale conosco: +595 981 234 567</small></p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

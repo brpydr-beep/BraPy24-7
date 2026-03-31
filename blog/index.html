@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BraPy24/7 | Blog - Dicas e atualizações sobre o Paraguai</title>
+    <meta name="description" content="Artigos completos sobre compras no Paraguai, cotação do dólar, melhores lojas e dicas para economizar em Ciudad del Este.">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-content">
+        <div class="logo">
+            <h1>Bra- <span>PY 24/7</span></h1>
+            <p>Blog · Dicas · Atualizações</p>
+        </div>
+        
+        <button class="hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav desktop-nav">
+            <a href="../index.html" class="nav-link">Início</a>
+            <a href="../cambio.html" class="nav-link">Câmbio</a>
+            <a href="../compras.html" class="nav-link">Compras</a>
+            <a href="../pets.html" class="nav-link">Pets</a>
+            <a href="../servicos.html" class="nav-link">Serviços</a>
+            <a href="index.html" class="nav-link active">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <h3>Bra-PY 24/7</h3>
+        <button class="close-menu" id="closeMenuBtn">&times;</button>
+    </div>
+    <nav class="mobile-nav">
+        <a href="../index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="../cambio.html"><i class="fas fa-dollar-sign"></i> Câmbio</a>
+        <a href="../compras.html"><i class="fas fa-shopping-bag"></i> Compras</a>
+        <a href="../pets.html"><i class="fas fa-paw"></i> Pets</a>
+        <a href="../servicos.html"><i class="fas fa-concierge-bell"></i> Serviços</a>
+        <a href="index.html"><i class="fas fa-blog"></i> Blog</a>
+        <a href="https://wa.me/595981234567" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </nav>
+</div>
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<main>
+    <div class="container">
+        <h2 class="section-title">📚 Blog - Dicas e atualizações</h2>
+        
+        <div class="grid-blog" id="blogContainer">
+            <!-- Artigos carregados via JavaScript -->
+        </div>
+
+        <div class="share-buttons">
+            <button class="btn-whatsapp" onclick="compartilharSite()">
+                <i class="fab fa-whatsapp"></i> Compartilhar este conteúdo
+            </button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Bra-PY 24/7 - Dicas exclusivas para você</p>
+    </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

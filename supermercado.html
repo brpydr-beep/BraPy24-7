@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bra-PY 24/7 | Supermercados no Paraguai - Melhores preços em CDE</title>
+    <meta name="description" content="Descubra os melhores supermercados em Ciudad del Este, comparação de preços, produtos mais baratos e dicas para economizar nas compras do mês.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-content">
+        <div class="logo">
+            <h1>Bra- <span>PY 24/7</span></h1>
+            <p>Supermercados · Ofertas · Economia</p>
+        </div>
+        
+        <button class="hamburger" id="hamburgerBtn">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="nav desktop-nav">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="cambio.html" class="nav-link">Câmbio</a>
+            <a href="compras.html" class="nav-link">Compras</a>
+            <a href="pets.html" class="nav-link">Pets</a>
+            <a href="servicos.html" class="nav-link">Serviços</a>
+            <a href="blog/index.html" class="nav-link">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <h3>Bra-PY 24/7</h3>
+        <button class="close-menu" id="closeMenuBtn">&times;</button>
+    </div>
+    <nav class="mobile-nav">
+        <a href="index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="cambio.html"><i class="fas fa-dollar-sign"></i> Câmbio</a>
+        <a href="compras.html"><i class="fas fa-shopping-bag"></i> Compras</a>
+        <a href="pets.html"><i class="fas fa-paw"></i> Pets</a>
+        <a href="servicos.html"><i class="fas fa-concierge-bell"></i> Serviços</a>
+        <a href="blog/index.html"><i class="fas fa-blog"></i> Blog</a>
+        <a href="https://wa.me/595981234567" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </nav>
+</div>
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<main>
+    <div class="container">
+        <div class="ad-space">📢 Espaço para Google AdSense</div>
+
+        <section class="banner-principal">
+            <h2>🛒 Onde fazer compras do mês mais barato no Paraguai</h2>
+            <p>Supermercados em Ciudad del Este com preços até 50% mais baixos que no Brasil</p>
+            <button class="btn-whatsapp" onclick="gerarLead('Supermercados')">Receber lista de ofertas</button>
+        </section>
+
+        <h2 class="section-title">🏪 Melhores Supermercados em CDE</h2>
+        
+        <div class="grid-servicos" id="supermercadosContainer">
+            <!-- Supermercados carregados via JavaScript -->
+        </div>
+
+        <div class="ad-space">📢 Seu supermercado aqui - Alcance milhares de clientes</div>
+
+        <h3 class="section-title">📰 Artigos sobre Supermercados</h3>
+        <div class="grid-artigos">
+            <div class="artigo-card">
+                <h3>🥩 Comparação de preços: Brasil vs Paraguai</h3>
+                <p>Carnes, bebidas, limpeza e higiene: veja a diferença.</p>
+                <button class="btn-lead" onclick="gerarLead('Comparação preços')">Baixar planilha</button>
+            </div>
+            <div class="artigo-card">
+                <h3>🍺 Bebidas e importados mais baratos</h3>
+                <p>Whisky, vinhos, cervejas e refrigerantes com preços incríveis.</p>
+                <button class="btn-lead" onclick="gerarLead('Bebidas')">Ver lista</button>
+            </div>
+            <div class="artigo-card">
+                <h3>📅 Melhores dias para comprar no Paraguai</h3>
+                <p>Promoções de fim de semana, estoque e dicas de economia.</p>
+                <button class="btn-lead" onclick="gerarLead('Melhores dias')">Receber dicas</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Bra-PY 24/7 - Economize nas compras do mês no Paraguai</p>
+        <p><small><i class="fab fa-whatsapp"></i> Dúvidas? +595 981 234 567</small></p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
