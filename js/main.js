@@ -1,3 +1,4 @@
+// ===== DADOS =====
 const petsData = [
     { nome: "Max", idade: "2 anos", descricao: "Cachorro brincalhão, adora crianças. Vacinado.", fotoIcon: "🐕", whatsapp: "595981111111" },
     { nome: "Luna", idade: "1 ano", descricao: "Gata carinhosa, castrada, convive bem com outros pets.", fotoIcon: "🐈", whatsapp: "595981222222" },
@@ -33,6 +34,7 @@ const supermercadosData = [
     { nome: "La Merca", descricao: "Especializado em produtos importados e bebidas.", contato: "595984444444", icone: "🍺" }
 ];
 
+// ===== FUNÇÕES GLOBAIS =====
 window.gerarLead = function(assunto) {
     const numero = "595981234567";
     const msg = `Olá! Tenho interesse em "${assunto}" - Gostaria de mais informações e dicas exclusivas.`;
@@ -44,6 +46,7 @@ window.compartilharSite = function() {
     window.open(`https://wa.me/?text=${encodeURIComponent('Confira o Bra-PY 24/7: ' + url)}`, '_blank');
 };
 
+// ===== RENDERIZAÇÕES =====
 function renderPets() {
     const container = document.getElementById('petsContainer');
     if (!container) return;
@@ -106,89 +109,6 @@ function renderSupermercados() {
     });
 }
 
-function initMobileMenu() {
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeMenuBtn = document.getElementById('closeMenuBtn');
-    const menuOverlay = document.getElementById('menuOverlay');
-    
-    if (!hamburgerBtn || !mobileMenu) return;
-    
-    hamburgerBtn.onclick = () => {
-        mobileMenu.classList.add('open');
-        if (menuOverlay) menuOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    };
-    
-    const closeMenu = () => {
-        mobileMenu.classList.remove('open');
-        if (menuOverlay) menuOverlay.classList.remove('active');
-        document.body.style.overflow = '';
-    };
-    
-    if (closeMenuBtn) closeMenuBtn.onclick = closeMenu;
-    if (menuOverlay) menuOverlay.onclick = closeMenu;
-}
-// ===== BARRA DE PESQUISA EXTERNA (FORA DO MENU) =====
-function initSearchExterno() {
-    const searchInput = document.getElementById('searchInputExterno');
-    const searchResults = document.getElementById('searchResultsExterno');
-    
-    if (!searchInput) return;
-    
-    const pages = [
-        { name: "🏠 Início", url: "index.html" },
-        { name: "💰 Câmbio", url: "cambio.html" },
-        { name: "🛍️ Compras", url: "compras.html" },
-        { name: "🐾 Pets / Adoção", url: "pets.html" },
-        { name: "🔧 Serviços", url: "servicos.html" },
-        { name: "🛒 Supermercados", url: "supermercado.html" },
-        { name: "📝 Blog", url: "blog/index.html" },
-        { name: "💵 Cotação do dólar", url: "cambio.html" },
-        { name: "📱 iPhone no Paraguai", url: "compras.html" },
-        { name: "💻 Lojas de eletrônicos", url: "compras.html" },
-        { name: "🚗 Transporte em CDE", url: "servicos.html" },
-        { name: "🏨 Hospedagem", url: "servicos.html" },
-        { name: "🏥 Clínicas", url: "servicos.html" },
-        { name: "🛡️ Segurança", url: "servicos.html" },
-        { name: "🐕 Adoção de pets", url: "pets.html" }
-    ];
-    
-    searchInput.addEventListener('input', function() {
-        const query = this.value.toLowerCase().trim();
-        
-        if (query === '') {
-            searchResults.innerHTML = '';
-            return;
-        }
-        
-        const filtered = pages.filter(page => 
-            page.name.toLowerCase().includes(query)
-        );
-        
-        if (filtered.length > 0) {
-            searchResults.innerHTML = filtered.map(page => 
-                `<a href="${page.url}">${page.name}</a>`
-            ).join('');
-        } else {
-            searchResults.innerHTML = '<div style="padding: 10px; color: #666;">Nenhum resultado encontrado</div>';
-        }
-    });
-    
-    // Fechar resultados ao clicar fora
-    document.addEventListener('click', function(e) {
-        if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
-            searchResults.innerHTML = '';
-        }
-    });
-}
-document.addEventListener('DOMContentLoaded', function() {
-    renderPets();
-    renderServicos();
-    renderBlog();
-    renderSupermercados();
-    initMobileMenu();
-});
 // ===== MENU HAMBÚRGUER =====
 function initMobileMenu() {
     const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -214,14 +134,13 @@ function initMobileMenu() {
     if (menuOverlay) menuOverlay.onclick = closeMenu;
 }
 
-// ===== BARRA DE PESQUISA =====
+// ===== BARRA DE PESQUISA (DENTRO DO MENU) =====
 function initSearch() {
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');
     
     if (!searchInput) return;
     
-    // Lista de páginas do site para pesquisar
     const pages = [
         { name: "Início", url: "index.html", icon: "🏠" },
         { name: "Câmbio", url: "cambio.html", icon: "💰" },
@@ -229,6 +148,8 @@ function initSearch() {
         { name: "Pets / Adoção", url: "pets.html", icon: "🐾" },
         { name: "Serviços", url: "servicos.html", icon: "🔧" },
         { name: "Supermercados", url: "supermercado.html", icon: "🛒" },
+        { name: "Preços", url: "precos.html", icon: "📊" },
+        { name: "VIP", url: "vip.html", icon: "👑" },
         { name: "Blog", url: "blog/index.html", icon: "📝" },
         { name: "Cotação do dólar", url: "cambio.html", icon: "💵" },
         { name: "iPhone no Paraguai", url: "compras.html", icon: "📱" },
@@ -260,16 +181,157 @@ function initSearch() {
     });
 }
 
-// ===== GERAR LEAD =====
-window.gerarLead = function(assunto) {
-    const numero = "595981234567";
-    const msg = `Olá! Tenho interesse em "${assunto}" - Gostaria de mais informações.`;
-    window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`, '_blank');
-};
+// ===== BARRA DE PESQUISA EXTERNA =====
+function initSearchExterno() {
+    const searchInput = document.getElementById('searchInputExterno');
+    const searchResults = document.getElementById('searchResultsExterno');
+    
+    if (!searchInput) return;
+    
+    const pages = [
+        { name: "🏠 Início", url: "index.html" },
+        { name: "💰 Câmbio", url: "cambio.html" },
+        { name: "🛍️ Compras", url: "compras.html" },
+        { name: "🛒 Supermercados", url: "supermercado.html" },
+        { name: "📊 Preços", url: "precos.html" },
+        { name: "👑 Grupo VIP", url: "vip.html" },
+        { name: "📝 Blog", url: "blog/index.html" },
+        { name: "💵 Cotação do dólar", url: "cambio.html" },
+        { name: "📱 iPhone no Paraguai", url: "compras.html" },
+        { name: "💻 Lojas de eletrônicos", url: "compras.html" },
+        { name: "🚗 Transporte em CDE", url: "servicos.html" },
+        { name: "🏨 Hospedagem", url: "servicos.html" },
+        { name: "🏥 Clínicas", url: "servicos.html" },
+        { name: "🛡️ Segurança", url: "servicos.html" }
+    ];
+    
+    searchInput.addEventListener('input', function() {
+        const query = this.value.toLowerCase().trim();
+        
+        if (query === '') {
+            searchResults.innerHTML = '';
+            return;
+        }
+        
+        const filtered = pages.filter(page => 
+            page.name.toLowerCase().includes(query)
+        );
+        
+        if (filtered.length > 0) {
+            searchResults.innerHTML = filtered.map(page => 
+                `<a href="${page.url}">${page.name}</a>`
+            ).join('');
+        } else {
+            searchResults.innerHTML = '<div style="padding: 10px; color: #666;">Nenhum resultado encontrado</div>';
+        }
+    });
+    
+    document.addEventListener('click', function(e) {
+        if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+            searchResults.innerHTML = '';
+        }
+    });
+}
 
-// ===== INICIALIZAR =====
+// ===== CONVERSOR ESTILO WISE =====
+let taxasWise = {};
+let moedaOrigemWise = 'BRL';
+let moedaDestinoWise = 'PYG';
+
+async function buscarTaxasWise() {
+    try {
+        const response = await fetch('https://api.exchangerate-api.com/v4/latest/BRL');
+        const data = await response.json();
+        
+        taxasWise = {
+            BRL: 1,
+            USD: data.rates.USD,
+            EUR: data.rates.EUR,
+            ARS: data.rates.ARS,
+            PYG: data.rates.PYG
+        };
+        
+        const updateElement = document.getElementById('wiseUpdate');
+        if (updateElement) updateElement.innerHTML = 'Atualizado agora';
+        
+        converterWise();
+        setTimeout(buscarTaxasWise, 300000);
+        
+    } catch (error) {
+        console.error('Erro ao buscar cotações:', error);
+        taxasWise = { BRL: 1, USD: 0.176, EUR: 0.162, ARS: 180, PYG: 1220 };
+        const updateElement = document.getElementById('wiseUpdate');
+        if (updateElement) updateElement.innerHTML = 'Taxas estimadas';
+        converterWise();
+    }
+}
+
+function converterWise() {
+    const valorInput = document.getElementById('valorWise');
+    if (!valorInput) return;
+    
+    const valor = parseFloat(valorInput.value);
+    moedaOrigemWise = document.getElementById('moedaOrigemWise').value;
+    moedaDestinoWise = document.getElementById('moedaDestinoWise').value;
+    
+    if (isNaN(valor) || valor <= 0) {
+        document.getElementById('resultadoWise').value = '0';
+        return;
+    }
+    
+    const valorEmBRL = valor / taxasWise[moedaOrigemWise];
+    const valorConvertido = valorEmBRL * taxasWise[moedaDestinoWise];
+    
+    const formatado = valorConvertido.toLocaleString('pt-BR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+    
+    document.getElementById('resultadoWise').value = formatado;
+    
+    const taxa = (taxasWise[moedaDestinoWise] / taxasWise[moedaOrigemWise]).toFixed(2);
+    const taxaElement = document.getElementById('taxaWise');
+    if (taxaElement) taxaElement.innerHTML = taxa;
+}
+
+function swapMoedasWise() {
+    const origemSelect = document.getElementById('moedaOrigemWise');
+    const destinoSelect = document.getElementById('moedaDestinoWise');
+    const valorInput = document.getElementById('valorWise');
+    const resultadoInput = document.getElementById('resultadoWise');
+    
+    const tempMoeda = origemSelect.value;
+    const tempValor = valorInput.value;
+    
+    origemSelect.value = destinoSelect.value;
+    destinoSelect.value = tempMoeda;
+    
+    valorInput.value = resultadoInput.value;
+    
+    converterWise();
+}
+
+function initConversorWise() {
+    const valorInput = document.getElementById('valorWise');
+    const moedaOrigem = document.getElementById('moedaOrigemWise');
+    const moedaDestino = document.getElementById('moedaDestinoWise');
+    
+    if (valorInput) {
+        valorInput.addEventListener('input', converterWise);
+        moedaOrigem.addEventListener('change', converterWise);
+        moedaDestino.addEventListener('change', converterWise);
+    }
+}
+
+// ===== INICIALIZAÇÃO PRINCIPAL =====
 document.addEventListener('DOMContentLoaded', function() {
+    renderPets();
+    renderServicos();
+    renderBlog();
+    renderSupermercados();
     initMobileMenu();
-    initSearch();        // Pesquisa dentro do menu
-    initSearchExterno(); // Pesquisa fora do menu (NAVA)
+    initSearch();
+    initSearchExterno();
+    initConversorWise();
+    buscarTaxasWise();
 });

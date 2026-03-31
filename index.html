@@ -18,20 +18,15 @@
             <p>Dicas · Compras · Serviços</p>
         </div>
         
-        <!-- BARRA DE PESQUISA EXTERNA (FORA DO MENU) -->
         <div class="search-bar-externa">
             <input type="text" id="searchInputExterno" placeholder="🔍 Pesquisar no site...">
             <div id="searchResultsExterno" class="search-results-externo"></div>
         </div>
         
-        <!-- Botão Hambúrguer -->
         <button class="hamburger" id="hamburgerBtn">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
 
-        <!-- Menu Desktop ATUALIZADO -->
         <nav class="nav desktop-nav">
             <a href="index.html" class="nav-link active">Início</a>
             <a href="cambio.html" class="nav-link">Câmbio</a>
@@ -44,19 +39,15 @@
     </div>
 </header>
 
-<!-- MENU MOBILE LATERAL COM PESQUISA ATUALIZADO -->
 <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-header">
         <h3>Bra-PY 24/7</h3>
         <button class="close-menu" id="closeMenuBtn">&times;</button>
     </div>
-    
-    <!-- BARRA DE PESQUISA -->
     <div class="mobile-search">
         <input type="text" id="searchInput" placeholder="🔍 Pesquisar...">
         <div id="searchResults" class="search-results"></div>
     </div>
-    
     <nav class="mobile-nav">
         <a href="index.html"><i class="fas fa-home"></i> Início</a>
         <a href="cambio.html"><i class="fas fa-dollar-sign"></i> Câmbio</a>
@@ -65,12 +56,9 @@
         <a href="precos.html"><i class="fas fa-chart-line"></i> Preços</a>
         <a href="blog/index.html"><i class="fas fa-blog"></i> Blog</a>
         <a href="vip.html"><i class="fas fa-crown"></i> VIP</a>
-        
         <div class="menu-divider"></div>
-        
         <a href="#contato"><i class="fas fa-envelope"></i> Contato</a>
         <a href="https://wa.me/595981234567" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-        
         <div class="menu-social">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -78,20 +66,84 @@
         </div>
     </nav>
 </div>
-
 <div class="menu-overlay" id="menuOverlay"></div>
 
 <main>
     <div class="container">
         <div class="ad-space">📢 Espaço para Google AdSense</div>
         
-        <section class="banner-principal">
-            <h2>📍 Onde comprar mais barato no Paraguai hoje</h2>
-            <p>Dicas atualizadas, melhores lojas e câmbio seguro em Ciudad del Este</p>
-            <button class="btn-whatsapp" onclick="gerarLead('Banner principal')">📱 Receber dicas no WhatsApp</button>
-        </section>
+        <!-- CONVERSOR + ANÚNCIOS LADO A LADO -->
+        <div class="conversor-layout">
+            
+            <!-- CONVERSOR ESTILO WISE -->
+            <div class="conversor-wise">
+                <div class="wise-header">
+                    <i class="fas fa-arrow-right-arrow-left"></i>
+                    <span>Conversor de Moedas</span>
+                    <span class="wise-badge">Taxas reais</span>
+                </div>
+                
+                <div class="wise-amount">
+                    <label>Você tem</label>
+                    <div class="wise-input-group">
+                        <input type="number" id="valorWise" placeholder="0" value="100">
+                        <select id="moedaOrigemWise">
+                            <option value="BRL">BRL</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="ARS">ARS</option>
+                            <option value="PYG">PYG</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="wise-switch">
+                    <i class="fas fa-exchange-alt" onclick="swapMoedasWise()"></i>
+                </div>
+                
+                <div class="wise-amount">
+                    <label>Você recebe</label>
+                    <div class="wise-input-group">
+                        <input type="text" id="resultadoWise" placeholder="0" readonly>
+                        <select id="moedaDestinoWise">
+                            <option value="BRL">BRL</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="ARS">ARS</option>
+                            <option value="PYG" selected>PYG</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="wise-rate">
+                    <i class="fas fa-chart-line"></i>
+                    <span>1 BRL = <span id="taxaWise">--</span> PYG</span>
+                    <span class="wise-update" id="wiseUpdate">Atualizando...</span>
+                </div>
+                
+                <button class="wise-alert" onclick="gerarLead('Alerta Câmbio')">
+                    <i class="fab fa-whatsapp"></i> Receber alertas no WhatsApp
+                </button>
+            </div>
+            
+            <!-- ESPAÇO PARA ANÚNCIOS -->
+            <div class="anuncio-lateral">
+                <div class="anuncio-card">
+                    <i class="fas fa-ad"></i>
+                    <h4>Espaço para Anúncio</h4>
+                    <p>Anuncie sua loja aqui</p>
+                    <button class="btn-anuncio" onclick="gerarLead('Anúncio')">Anunciar</button>
+                </div>
+                <div class="anuncio-card">
+                    <i class="fas fa-crown"></i>
+                    <h4>Grupo VIP</h4>
+                    <p>Ofertas exclusivas</p>
+                    <button class="btn-anuncio" onclick="window.location.href='vip.html'">Saiba mais</button>
+                </div>
+            </div>
+        </div>
 
-        <!-- CATEGORIAS ATUALIZADAS (sem Pets, com Preços) -->
+        <!-- CATEGORIAS -->
         <section class="categorias">
             <div class="card-categoria">
                 <i class="fas fa-exchange-alt"></i>
@@ -158,7 +210,6 @@
     </div>
 </footer>
 
-<!-- Botão WhatsApp Flutuante -->
 <a href="https://wa.me/595981234567?text=Olá! Vim pelo site Bra-PY 24/7 e quero saber mais sobre as ofertas." 
    class="whatsapp-float" target="_blank" 
    style="position: fixed; bottom: 20px; right: 20px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1000;">
