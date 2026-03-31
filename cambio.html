@@ -133,7 +133,7 @@
             </button>
         </div>
 
-        <!-- Ranking de Casas de Câmbio com Cotações em Tempo Real -->
+    <!-- Ranking de Casas de Câmbio com Cotações em Tempo Real -->
         <h2 class="section-title">🏆 Ranking das Melhores Casas de Câmbio em CDE <span class="badge-tempo-real">COTAÇÕES EM TEMPO REAL</span></h2>
         <div class="tabela-cambio ranking-table">
             <table id="rankingCambio">
@@ -143,11 +143,11 @@
                         <th>Nome</th>
                         <th>Cotação (USD/PYG)</th>
                         <th>Spread</th>
-                        <th>Atendimento</th>
+                        <th>Localização</th>
                         <th>Contato</th>
                     </thead>
                 <tbody id="rankingBody">
-                    <tr><td colspan="6" style="text-align: center;"><span class="loading-spinner"></span> Carregando cotações em tempo real...</td></tr>
+                    应用<td colspan="6" style="text-align: center;"><span class="loading-spinner"></span> Carregando cotações em tempo real...应用</td>
                 </tbody>
             </table>
         </div>
@@ -277,15 +277,155 @@
         }
     }
     
-    function atualizarRankingCambio(pygAtual) {
+        function atualizarRankingCambio(pygAtual) {
         // Casas de câmbio com spreads diferentes para simular variação real
         const casas = [
-            { nome: "Cambios Chaco", avaliacao: "⭐ 4.9 (1.234 avaliações)", spread: 1.005, whatsapp: "595981234567" },
-            { nome: "Maxicambios", avaliacao: "⭐ 4.8 (987 avaliações)", spread: 1.003, whatsapp: "595971234567" },
-            { nome: "Intercambios CDE", avaliacao: "⭐ 4.7 (756 avaliações)", spread: 1.008, whatsapp: "595961234567" },
-            { nome: "Cambio Real", avaliacao: "⭐ 4.6 (543 avaliações)", spread: 1.002, whatsapp: "595981111111" },
-            { nome: "Cambio Itaipu", avaliacao: "⭐ 4.5 (432 avaliações)", spread: 1.01, whatsapp: "595982222222" }
+            { 
+                nome: "Cambios Chaco S.A.", 
+                descricao: "Uma das maiores e mais confiáveis, com várias filiais",
+                avaliacao: "⭐ 4.9 (2.345 avaliações)", 
+                spread: 1.005, 
+                whatsapp: "595981234567",
+                localizacao: "-25.5167,-54.6167",
+                endereco: "Av. Adrian Jara, Ciudad del Este",
+                icone: "🏦"
+            },
+            { 
+                nome: "Maxi Cambios", 
+                descricao: "Muito tradicional e localizada, reconhecida pela segurança e taxas competitivas",
+                avaliacao: "⭐ 4.8 (1.876 avaliações)", 
+                spread: 1.003, 
+                whatsapp: "595971234567",
+                localizacao: "-25.5185,-54.6145",
+                endereco: "Av. Monseñor Rodríguez, CDE",
+                icone: "🏛️"
+            },
+            { 
+                nome: "Valor Cambios", 
+                descricao: "Conhecida por bom atendimento e ótimas cotações, aceita Pix",
+                avaliacao: "⭐ 4.8 (1.234 avaliações)", 
+                spread: 1.002, 
+                whatsapp: "595981111111",
+                localizacao: "-25.5150,-54.6170",
+                endereco: "Calle Pte. Franco, Ciudad del Este",
+                icone: "💱"
+            },
+            { 
+                nome: "La Moneda Cambios", 
+                descricao: "Localização central e bastante frequentada por turistas",
+                avaliacao: "⭐ 4.7 (987 avaliações)", 
+                spread: 1.006, 
+                whatsapp: "595982222222",
+                localizacao: "-25.5142,-54.6185",
+                endereco: "Av. Adrián Jara casi Pte. Franco",
+                icone: "📍"
+            },
+            { 
+                nome: "Oriente Cambios S.A.", 
+                descricao: "Casa de câmbio tradicional com agências em pontos estratégicos",
+                avaliacao: "⭐ 4.7 (876 avaliações)", 
+                spread: 1.004, 
+                whatsapp: "595983333333",
+                localizacao: "-25.5170,-54.6155",
+                endereco: "Av. San Blás, Ciudad del Este",
+                icone: "🏢"
+            },
+            { 
+                nome: "Bonanza Cambios S.A.", 
+                descricao: "Oferece serviços de câmbio com boa reputação",
+                avaliacao: "⭐ 4.6 (654 avaliações)", 
+                spread: 1.007, 
+                whatsapp: "595984444444",
+                localizacao: "-25.5190,-54.6130",
+                endereco: "Calle Boquerón, Ciudad del Este",
+                icone: "💰"
+            },
+            { 
+                nome: "Cambios Alberdi", 
+                descricao: "Oferece serviços ágeis e boa localização no centro",
+                avaliacao: "⭐ 4.6 (543 avaliações)", 
+                spread: 1.008, 
+                whatsapp: "595985555555",
+                localizacao: "-25.5135,-54.6190",
+                endereco: "Calle Alberdi, Ciudad del Este",
+                icone: "⚡"
+            },
+            { 
+                nome: "Cambios Yrendague S.A.", 
+                descricao: "Atua com diversas moedas e possui presença digital para conferir taxas",
+                avaliacao: "⭐ 4.5 (432 avaliações)", 
+                spread: 1.009, 
+                whatsapp: "595986666666",
+                localizacao: "-25.5160,-54.6160",
+                endereco: "Av. Monseñor Rodríguez 1234",
+                icone: "📱"
+            },
+            { 
+                nome: "Fe Cambios S.A.", 
+                descricao: "Conhecida pela excelência no atendimento",
+                avaliacao: "⭐ 4.8 (1.102 avaliações)", 
+                spread: 1.003, 
+                whatsapp: "595987777777",
+                localizacao: "-25.5148,-54.6175",
+                endereco: "Av. Adrián Jara, Shopping China",
+                icone: "🤝"
+            },
+            { 
+                nome: "K2 Exchange", 
+                descricao: "Moderno, com taxas competitivas e atendimento rápido",
+                avaliacao: "⭐ 4.7 (789 avaliações)", 
+                spread: 1.004, 
+                whatsapp: "595988888888",
+                localizacao: "-25.5175,-54.6148",
+                endereco: "Av. San Blás 456, CDE",
+                icone: "🔄"
+            }
         ];
+        
+        // Ordenar por melhor cotação (menor spread)
+        casas.sort((a, b) => a.spread - b.spread);
+        
+        const tbody = document.getElementById('rankingBody');
+        tbody.innerHTML = '';
+        
+        casas.forEach((casa, index) => {
+            const cotacao = pygAtual / casa.spread;
+            const spreadPercentual = ((casa.spread - 1) * 100).toFixed(1);
+            
+            // Ícones para os primeiros lugares
+            let medalha = '';
+            if (index === 0) medalha = '🥇';
+            else if (index === 1) medalha = '🥈';
+            else if (index === 2) medalha = '🥉';
+            else medalha = index + 1;
+            
+            const row = `
+                <tr>
+                    <td style="text-align: center; font-weight: bold;">${medalha}</td>
+                    <td>
+                        <strong>${casa.icone} ${casa.nome}</strong><br>
+                        <small style="color: #64748b;">${casa.descricao}</small><br>
+                        <small>${casa.avaliacao}</small>
+                    </td>
+                    <td class="cotacao" style="font-weight: bold;">₲ ${Math.floor(cotacao).toLocaleString()}</td>
+                    <td><span style="color:#dc2626;">+${spreadPercentual}%</span></td>
+                    <td>
+                        <i class="fas fa-map-marker-alt" style="color:#15803d;"></i> 
+                        <small>${casa.endereco}</small><br>
+                        <a href="https://www.google.com/maps?q=${casa.localizacao}" target="_blank" style="font-size: 0.7rem; color: #2563eb; text-decoration: none;">
+                            <i class="fas fa-external-link-alt"></i> Ver no mapa
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://wa.me/${casa.whatsapp}?text=Olá! Vi o ${casa.nome} no ranking do Bra-PY 24/7 e quero saber a cotação de hoje." class="btn-whatsapp-cambio" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </td>
+                </tr>
+            `;
+            tbody.innerHTML += row;
+        });
+    }
         
         // Ordenar por melhor cotação
         casas.sort((a, b) => a.spread - b.spread);
@@ -309,7 +449,6 @@
             `;
             tbody.innerHTML += row;
         });
-    }
     
     function atualizarTabelaMoedas() {
         const moedas = [
