@@ -517,3 +517,142 @@ footer {
         display: none;
     }
 }
+/* ===== CARDS EM 1 COLUNA NO CELULAR COM LAYOUT HORIZONTAL (NÃO GIGANTE) ===== */
+@media (max-width: 768px) {
+    /* Categorias da página inicial - 1 coluna com cards horizontais */
+    .categorias {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin: 25px 0;
+    }
+    
+    .card-categoria {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 15px;
+        padding: 12px 15px;
+    }
+    
+    .card-categoria i {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+        min-width: 45px;
+    }
+    
+    .card-categoria h3 {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+    
+    .card-categoria p {
+        font-size: 0.7rem;
+        margin-bottom: 0;
+    }
+    
+    .card-categoria .btn-lead {
+        margin-left: auto;
+        margin-top: 0;
+        padding: 6px 12px;
+        font-size: 0.7rem;
+        white-space: nowrap;
+    }
+    
+    /* Artigos e outros cards - 1 coluna */
+    .grid-artigos, .grid-pets, .grid-servicos, .grid-blog {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .artigo-card, .pet-card, .servico-card, .blog-post {
+        padding: 15px;
+    }
+    
+    .artigo-card h3 {
+        font-size: 1rem;
+    }
+    
+    .artigo-card p {
+        font-size: 0.8rem;
+    }
+    
+    .artigo-card .btn-lead, .artigo-card .btn-whatsapp {
+        font-size: 0.75rem;
+        padding: 6px 12px;
+    }
+    
+    /* Tabela de câmbio - rolagem horizontal */
+    .tabela-cambio {
+        overflow-x: auto;
+    }
+    
+    table {
+        min-width: 500px;
+    }
+    
+    th, td {
+        padding: 10px 8px;
+        font-size: 0.8rem;
+    }
+    
+    /* Banner principal - texto menor */
+    .banner-principal {
+        padding: 25px 20px;
+        margin: 20px 0;
+    }
+    
+    .banner-principal h2 {
+        font-size: 1.2rem;
+    }
+    
+    .banner-principal p {
+        font-size: 0.85rem;
+    }
+    
+    .banner-principal .btn-whatsapp {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+    
+    /* Títulos */
+    .section-title {
+        font-size: 1.3rem;
+        margin: 25px 0 15px 0;
+    }
+    
+    /* Espaço para anúncios */
+    .ad-space {
+        padding: 15px;
+        font-size: 0.8rem;
+        margin: 20px 0;
+    }
+    
+    /* Logo menor */
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+    
+    .logo p {
+        font-size: 0.65rem;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 20px;
+        font-size: 0.75rem;
+        margin-top: 30px;
+    }
+    
+    footer p {
+        font-size: 0.7rem;
+    }
+    
+    /* Botão WhatsApp flutuante menor no celular */
+    .whatsapp-float {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.6rem !important;
+        bottom: 15px !important;
+        right: 15px !important;
+    }
+}

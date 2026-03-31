@@ -18,6 +18,12 @@
             <p>Câmbio · Cotação · Contato</p>
         </div>
         
+        <!-- BARRA DE PESQUISA EXTERNA -->
+        <div class="search-bar-externa">
+            <input type="text" id="searchInputExterno" placeholder="🔍 Pesquisar no site...">
+            <div id="searchResultsExterno" class="search-results-externo"></div>
+        </div>
+        
         <button class="hamburger" id="hamburgerBtn">
             <span></span><span></span><span></span>
         </button>
@@ -26,9 +32,10 @@
             <a href="index.html" class="nav-link">Início</a>
             <a href="cambio.html" class="nav-link active">Câmbio</a>
             <a href="compras.html" class="nav-link">Compras</a>
-            <a href="pets.html" class="nav-link">Pets</a>
-            <a href="servicos.html" class="nav-link">Serviços</a>
+            <a href="supermercado.html" class="nav-link">Supermercados</a>
+            <a href="precos.html" class="nav-link">Preços</a>
             <a href="blog/index.html" class="nav-link">Blog</a>
+            <a href="vip.html" class="nav-link">VIP</a>
         </nav>
     </div>
 </header>
@@ -38,14 +45,31 @@
         <h3>Bra-PY 24/7</h3>
         <button class="close-menu" id="closeMenuBtn">&times;</button>
     </div>
+    
+    <div class="mobile-search">
+        <input type="text" id="searchInput" placeholder="🔍 Pesquisar...">
+        <div id="searchResults" class="search-results"></div>
+    </div>
+    
     <nav class="mobile-nav">
         <a href="index.html"><i class="fas fa-home"></i> Início</a>
         <a href="cambio.html"><i class="fas fa-dollar-sign"></i> Câmbio</a>
         <a href="compras.html"><i class="fas fa-shopping-bag"></i> Compras</a>
-        <a href="pets.html"><i class="fas fa-paw"></i> Pets</a>
-        <a href="servicos.html"><i class="fas fa-concierge-bell"></i> Serviços</a>
+        <a href="supermercado.html"><i class="fas fa-shopping-basket"></i> Supermercados</a>
+        <a href="precos.html"><i class="fas fa-chart-line"></i> Preços</a>
         <a href="blog/index.html"><i class="fas fa-blog"></i> Blog</a>
+        <a href="vip.html"><i class="fas fa-crown"></i> VIP</a>
+        
+        <div class="menu-divider"></div>
+        
+        <a href="#contato"><i class="fas fa-envelope"></i> Contato</a>
         <a href="https://wa.me/595981234567" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        
+        <div class="menu-social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
     </nav>
 </div>
 <div class="menu-overlay" id="menuOverlay"></div>
@@ -55,7 +79,7 @@
         <h2 class="section-title">🏦 Ranking de Casas de Câmbio - CDE</h2>
         
         <div class="tabela-cambio">
-            <table>
+             <table>
                 <thead>
                     <tr><th>Nome</th><th>Cotação (USD/PYG)</th><th>Contato</th></tr>
                 </thead>
@@ -91,6 +115,13 @@
         <p><small><i class="fab fa-whatsapp"></i> Anuncie: +595 981 234 567</small></p>
     </div>
 </footer>
+
+<!-- Botão WhatsApp Flutuante -->
+<a href="https://wa.me/595981234567?text=Olá! Vim pelo site Bra-PY 24/7 e quero saber mais sobre as ofertas." 
+   class="whatsapp-float" target="_blank" 
+   style="position: fixed; bottom: 20px; right: 20px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1000;">
+   <i class="fab fa-whatsapp"></i>
+</a>
 
 <script src="js/main.js"></script>
 </body>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preços no Paraguai | Bra-PY 24/7 - Comparativo de valores atualizado</title>
+    <meta name="description" content="Tabela de preços atualizada: iPhones, eletrônicos, perfumes e muito mais. Compare os valores e economize nas suas compras em Ciudad del Este.">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .price-update { background: #f1f5f9; padding: 10px 20px; border-radius: 30px; display: inline-block; margin-bottom: 20px; font-size: 0.85rem; }
+        .savings-badge { background: #15803d; color: white; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; }
+        .price-table th { background: #15803d; }
+        .price-table td { text-align: center; }
+        .price-table .product-name { text-align: left; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container header-content">
+        <div class="logo">
+            <h1>Bra- <span>PY 24/7</span></h1>
+            <p>Preços · Comparativo · Economia</p>
+        </div>
+        
+        <div class="search-bar-externa">
+            <input type="text" id="searchInputExterno" placeholder="🔍 Pesquisar no site...">
+            <div id="searchResultsExterno" class="search-results-externo"></div>
+        </div>
+        
+        <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+        
+        <nav class="nav desktop-nav">
+            <a href="index.html" class="nav-link">Início</a>
+            <a href="cambio.html" class="nav-link">Câmbio</a>
+            <a href="compras.html" class="nav-link">Compras</a>
+            <a href="supermercado.html" class="nav-link">Supermercados</a>
+            <a href="precos.html" class="nav-link active">Preços</a>
+            <a href="blog/index.html" class="nav-link">Blog</a>
+            <a href="vip.html" class="nav-link">VIP</a>
+        </nav>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header"><h3>Bra-PY 24/7</h3><button class="close-menu" id="closeMenuBtn">&times;</button></div>
+    <div class="mobile-search"><input type="text" id="searchInput" placeholder="🔍 Pesquisar..."><div id="searchResults" class="search-results"></div></div>
+    <nav class="mobile-nav">
+        <a href="index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="cambio.html"><i class="fas fa-dollar-sign"></i> Câmbio</a>
+        <a href="compras.html"><i class="fas fa-shopping-bag"></i> Compras</a>
+        <a href="supermercado.html"><i class="fas fa-shopping-basket"></i> Supermercados</a>
+        <a href="precos.html"><i class="fas fa-chart-line"></i> Preços</a>
+        <a href="blog/index.html"><i class="fas fa-blog"></i> Blog</a>
+        <a href="vip.html"><i class="fas fa-crown"></i> VIP</a>
+        <div class="menu-divider"></div>
+        <a href="#contato"><i class="fas fa-envelope"></i> Contato</a>
+        <a href="https://wa.me/595981234567" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <div class="menu-social"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div>
+    </nav>
+</div>
+<div class="menu-overlay" id="menuOverlay"></div>
+
+<main>
+    <div class="container">
+        <div class="price-update"><i class="fas fa-calendar-alt"></i> Última atualização: Abril 2026</div>
+
+        <h2 class="section-title">📊 Tabela de Preços - Paraguai vs Brasil</h2>
+        
+        <div class="ad-space">
+            🔔 Quer receber atualizações de preços no WhatsApp? 
+            <button onclick="gerarLead('Alertas de Preço')" class="btn-lead" style="margin-top: 0; margin-left: 10px;"><i class="fab fa-whatsapp"></i> Quero receber</button>
+        </div>
+
+        <div class="tabela-cambio">
+            <table class="price-table">
+                <thead><tr><th>Produto</th><th>Preço no Paraguai</th><th>Preço no Brasil</th><th>Economia</th></tr></thead>
+                <tbody>
+                    <tr><td class="product-name">📱 iPhone 16 Pro Max (256GB)</td><td class="cotacao">R$ 6.499</td><td>R$ 10.999</td><td><span class="savings-badge">-41%</span></td></tr>
+                    <tr><td class="product-name">📱 iPhone 15 Pro (128GB)</td><td class="cotacao">R$ 5.199</td><td>R$ 7.999</td><td><span class="savings-badge">-35%</span></td></tr>
+                    <tr><td class="product-name">💻 MacBook Air M2</td><td class="cotacao">R$ 7.499</td><td>R$ 11.999</td><td><span class="savings-badge">-38%</span></td></tr>
+                    <tr><td class="product-name">⌚ Apple Watch Series 9</td><td class="cotacao">R$ 2.299</td><td>R$ 3.999</td><td><span class="savings-badge">-43%</span></td></tr>
+                    <tr><td class="product-name">🎧 AirPods Pro 2</td><td class="cotacao">R$ 1.299</td><td>R$ 2.199</td><td><span class="savings-badge">-41%</span></td></tr>
+                    <tr><td class="product-name">🎮 PlayStation 5 (1TB)</td><td class="cotacao">R$ 3.299</td><td>R$ 4.699</td><td><span class="savings-badge">-30%</span></td></tr>
+                    <tr><td class="product-name">👟 Tênis Nike Air Max</td><td class="cotacao">R$ 450</td><td>R$ 799</td><td><span class="savings-badge">-44%</span></td></tr>
+                    <tr><td class="product-name">👕 Camisa Polo Lacoste</td><td class="cotacao">R$ 180</td><td>R$ 399</td><td><span class="savings-badge">-55%</span></td></tr>
+                    <tr><td class="product-name">💄 Perfume 212 VIP</td><td class="cotacao">R$ 280</td><td>R$ 550</td><td><span class="savings-badge">-49%</span></td></tr>
+                    <tr><td class="product-name">🍾 Whisky Johnnie Walker Black</td><td class="cotacao">R$ 120</td><td>R$ 250</td><td><span class="savings-badge">-52%</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="ad-space">
+            🌟 <strong>Seja um revendedor</strong> - Aprenda a maximizar seus lucros com nosso guia exclusivo
+            <br><button onclick="gerarLead('Guia Revendedor')" class="btn-lead">Quero saber mais</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Bra-PY 24/7 - Preços sujeitos a variação cambial</p>
+        <p><small><i class="fab fa-whatsapp"></i> Dúvidas? +595 981 234 567</small></p>
+    </div>
+</footer>
+
+<a href="https://wa.me/595981234567?text=Olá! Vim pelo site Bra-PY 24/7 e quero saber mais sobre as ofertas." class="whatsapp-float" target="_blank" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1000;"><i class="fab fa-whatsapp"></i></a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -31,19 +31,20 @@
             <span></span>
         </button>
 
-        <!-- Menu Desktop -->
+        <!-- Menu Desktop ATUALIZADO -->
         <nav class="nav desktop-nav">
             <a href="index.html" class="nav-link active">Início</a>
             <a href="cambio.html" class="nav-link">Câmbio</a>
             <a href="compras.html" class="nav-link">Compras</a>
-            <a href="pets.html" class="nav-link">Pets</a>
-            <a href="servicos.html" class="nav-link">Serviços</a>
+            <a href="supermercado.html" class="nav-link">Supermercados</a>
+            <a href="precos.html" class="nav-link">Preços</a>
             <a href="blog/index.html" class="nav-link">Blog</a>
+            <a href="vip.html" class="nav-link">VIP</a>
         </nav>
     </div>
 </header>
 
-<!-- MENU MOBILE LATERAL COM PESQUISA -->
+<!-- MENU MOBILE LATERAL COM PESQUISA ATUALIZADO -->
 <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-header">
         <h3>Bra-PY 24/7</h3>
@@ -60,10 +61,10 @@
         <a href="index.html"><i class="fas fa-home"></i> Início</a>
         <a href="cambio.html"><i class="fas fa-dollar-sign"></i> Câmbio</a>
         <a href="compras.html"><i class="fas fa-shopping-bag"></i> Compras</a>
-        <a href="pets.html"><i class="fas fa-paw"></i> Pets</a>
-        <a href="servicos.html"><i class="fas fa-concierge-bell"></i> Serviços</a>
         <a href="supermercado.html"><i class="fas fa-shopping-basket"></i> Supermercados</a>
+        <a href="precos.html"><i class="fas fa-chart-line"></i> Preços</a>
         <a href="blog/index.html"><i class="fas fa-blog"></i> Blog</a>
+        <a href="vip.html"><i class="fas fa-crown"></i> VIP</a>
         
         <div class="menu-divider"></div>
         
@@ -90,6 +91,7 @@
             <button class="btn-whatsapp" onclick="gerarLead('Banner principal')">📱 Receber dicas no WhatsApp</button>
         </section>
 
+        <!-- CATEGORIAS ATUALIZADAS (sem Pets, com Preços) -->
         <section class="categorias">
             <div class="card-categoria">
                 <i class="fas fa-exchange-alt"></i>
@@ -104,22 +106,22 @@
                 <a href="compras.html" class="btn-lead">Ver</a>
             </div>
             <div class="card-categoria">
-                <i class="fas fa-paw"></i>
-                <h3>Pets</h3>
-                <p>Adoção</p>
-                <a href="pets.html" class="btn-lead">Ver</a>
-            </div>
-            <div class="card-categoria">
-                <i class="fas fa-concierge-bell"></i>
-                <h3>Serviços</h3>
-                <p>Parceiros</p>
-                <a href="servicos.html" class="btn-lead">Ver</a>
-            </div>
-            <div class="card-categoria">
                 <i class="fas fa-shopping-basket"></i>
                 <h3>Supermercados</h3>
                 <p>Preços baixos</p>
                 <a href="supermercado.html" class="btn-lead">Ver</a>
+            </div>
+            <div class="card-categoria">
+                <i class="fas fa-chart-line"></i>
+                <h3>Preços</h3>
+                <p>Comparativo atualizado</p>
+                <a href="precos.html" class="btn-lead">Ver</a>
+            </div>
+            <div class="card-categoria">
+                <i class="fas fa-crown"></i>
+                <h3>Grupo VIP</h3>
+                <p>Ofertas exclusivas</p>
+                <a href="vip.html" class="btn-lead">Saiba mais</a>
             </div>
         </section>
 
@@ -140,6 +142,11 @@
                 <p>Ranking atualizado.</p>
                 <a href="blog/index.html" class="btn-lead">Ler mais</a>
             </div>
+            <div class="artigo-card">
+                <h3>📈 Para Revendedores</h3>
+                <p>Guia completo de margens e lucros.</p>
+                <a href="blog/para-revendedores.html" class="btn-lead">Ler mais</a>
+            </div>
         </div>
     </div>
 </main>
@@ -150,6 +157,13 @@
         <p>📱 WhatsApp: +595 981 234 567</p>
     </div>
 </footer>
+
+<!-- Botão WhatsApp Flutuante -->
+<a href="https://wa.me/595981234567?text=Olá! Vim pelo site Bra-PY 24/7 e quero saber mais sobre as ofertas." 
+   class="whatsapp-float" target="_blank" 
+   style="position: fixed; bottom: 20px; right: 20px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 1000;">
+   <i class="fab fa-whatsapp"></i>
+</a>
 
 <script src="js/main.js"></script>
 </body>
