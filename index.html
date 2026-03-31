@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BraPy24/7 | Do Brasil ao PY, 24/7 para você</title>
-    <meta name="description" content="Guia completo para compras, câmbio e serviços em Ciudad del Este.">
+    <title>BraPy24/7 | Economize até 50% nas suas compras no Paraguai</title>
+    <meta name="description" content="Guia completo para compras, câmbio e serviços em Ciudad del Este. Economize até 50% em eletrônicos, perfumes e muito mais.">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -15,7 +15,7 @@
     <div class="container header-content">
         <div class="logo">
             <h1>Bra- <span>PY 24/7</span></h1>
-            <p>Dicas · Compras · Serviços</p>
+            <p>Economize até 50% · Dicas · Compras</p>
         </div>
         
         <div class="search-bar-externa">
@@ -70,19 +70,31 @@
 
 <main>
     <div class="container">
+        <!-- BANNER DE OFERTA RELÂMPAGO -->
+        <div class="flash-sale">
+            <div class="flash-content">
+                <div class="flash-icon">
+                    <i class="fas fa-bolt"></i>
+                    <span>OFERTA RELÂMPAGO</span>
+                </div>
+                <div class="flash-text">
+                    <p>📱 <strong>iPhone 15 Pro</strong> com desconto exclusivo! Economize até <strong>R$ 1.500</strong></p>
+                </div>
+                <a href="compras.html" class="flash-btn">Ver oferta →</a>
+            </div>
+        </div>
+
+        <!-- ESPAÇO ADSENSE -->
         <div class="ad-space">📢 Espaço para Google AdSense</div>
         
-        <!-- CONVERSOR + ANÚNCIOS LADO A LADO -->
+        <!-- CONVERSOR + ANÚNCIOS -->
         <div class="conversor-layout">
-            
-            <!-- CONVERSOR ESTILO WISE -->
             <div class="conversor-wise">
                 <div class="wise-header">
                     <i class="fas fa-arrow-right-arrow-left"></i>
                     <span>Conversor de Moedas</span>
                     <span class="wise-badge">Taxas reais</span>
                 </div>
-                
                 <div class="wise-amount">
                     <label>Você tem</label>
                     <div class="wise-input-group">
@@ -96,11 +108,9 @@
                         </select>
                     </div>
                 </div>
-                
                 <div class="wise-switch">
                     <i class="fas fa-exchange-alt" onclick="swapMoedasWise()"></i>
                 </div>
-                
                 <div class="wise-amount">
                     <label>Você recebe</label>
                     <div class="wise-input-group">
@@ -114,19 +124,15 @@
                         </select>
                     </div>
                 </div>
-                
                 <div class="wise-rate">
                     <i class="fas fa-chart-line"></i>
                     <span>1 BRL = <span id="taxaWise">--</span> PYG</span>
                     <span class="wise-update" id="wiseUpdate">Atualizando...</span>
                 </div>
-                
                 <button class="wise-alert" onclick="gerarLead('Alerta Câmbio')">
                     <i class="fab fa-whatsapp"></i> Receber alertas no WhatsApp
                 </button>
             </div>
-            
-            <!-- ESPAÇO PARA ANÚNCIOS -->
             <div class="anuncio-lateral">
                 <div class="anuncio-card">
                     <i class="fas fa-ad"></i>
@@ -134,14 +140,73 @@
                     <p>Anuncie sua loja aqui</p>
                     <button class="btn-anuncio" onclick="gerarLead('Anúncio')">Anunciar</button>
                 </div>
-                <div class="anuncio-card">
+                <div class="anuncio-card vip-destaque">
                     <i class="fas fa-crown"></i>
                     <h4>Grupo VIP</h4>
-                    <p>Ofertas exclusivas</p>
-                    <button class="btn-anuncio" onclick="window.location.href='vip.html'">Saiba mais</button>
+                    <p>Ofertas exclusivas + alertas em tempo real</p>
+                    <button class="btn-anuncio btn-vip-destaque" onclick="window.location.href='vip.html'">Quero ser VIP →</button>
                 </div>
             </div>
         </div>
+
+        <!-- SELOS DE CONFIANÇA -->
+        <div class="selos-confianca">
+            <div class="selo-item">
+                <i class="fas fa-shield-alt"></i>
+                <div>
+                    <strong>+500 clientes</strong>
+                    <span>satisfeitos</span>
+                </div>
+            </div>
+            <div class="selo-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <strong>Atualização</strong>
+                    <span>em tempo real</span>
+                </div>
+            </div>
+            <div class="selo-item">
+                <i class="fas fa-tag"></i>
+                <div>
+                    <strong>Economia</strong>
+                    <span>de até 50%</span>
+                </div>
+            </div>
+            <div class="selo-item">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                    <strong>Suporte</strong>
+                    <span>24/7</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- POR QUE COMPRAR NO PARAGUAI? -->
+        <section class="porque-paraguai">
+            <h2 class="section-title">🇵🇾 Por que comprar no Paraguai?</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Economia de até 50%</h3>
+                    <p>Produtos como eletrônicos, perfumes e bebidas têm preços muito menores que no Brasil.</p>
+                </div>
+                <div class="beneficio-card">
+                    <i class="fas fa-store"></i>
+                    <h3>Variedade de produtos</h3>
+                    <p>Lojas com estoque enorme e produtos que não encontramos facilmente no Brasil.</p>
+                </div>
+                <div class="beneficio-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Produtos originais</h3>
+                    <p>Comprando nas lojas certas, você leva produtos originais com garantia.</p>
+                </div>
+                <div class="beneficio-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Suporte em português</h3>
+                    <p>Atendimento em português nas principais lojas de Ciudad del Este.</p>
+                </div>
+            </div>
+        </section>
 
         <!-- CATEGORIAS -->
         <section class="categorias">
@@ -177,27 +242,73 @@
             </div>
         </section>
 
+        <!-- DEPOIMENTOS -->
+        <section class="depoimentos">
+            <h2 class="section-title">💬 O que dizem nossos clientes</h2>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Comprei meu iPhone 15 Pro usando as dicas do site e economizei R$ 1.200! O conversor de câmbio é muito preciso."</p>
+                    <div class="depoimento-autor">
+                        <strong>Marcos R.</strong>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"O grupo VIP é sensacional! Recebo ofertas exclusivas e cotações em tempo real. Vale cada centavo."</p>
+                    <div class="depoimento-autor">
+                        <strong>Juliana S.</strong>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <div class="depoimento-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Viajo frequentemente para CDE e o Bra-PY 24/7 me ajuda a encontrar os melhores preços e lojas confiáveis."</p>
+                    <div class="depoimento-autor">
+                        <strong>Carlos A.</strong>
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ARTIGOS RECENTES COM DATA -->
         <h2 class="section-title">📝 Artigos Recentes</h2>
         <div class="grid-artigos">
             <div class="artigo-card">
+                <span class="artigo-data">📅 31/03/2026</span>
                 <h3>💰 Cotação do dólar hoje</h3>
-                <p>Atualizada diariamente.</p>
-                <a href="blog/index.html" class="btn-lead">Ler mais</a>
+                <p>Atualizada diariamente com valores reais das principais casas de câmbio.</p>
+                <a href="blog/index.html" class="btn-lead">Ler mais →</a>
             </div>
             <div class="artigo-card">
+                <span class="artigo-data">📅 30/03/2026</span>
                 <h3>📱 Vale a pena comprar iPhone?</h3>
-                <p>Economia de até 30%.</p>
-                <a href="blog/index.html" class="btn-lead">Ler mais</a>
+                <p>Comparativo de preços 2026: economia de até 30% em relação ao Brasil.</p>
+                <a href="blog/index.html" class="btn-lead">Ler mais →</a>
             </div>
             <div class="artigo-card">
+                <span class="artigo-data">📅 28/03/2026</span>
                 <h3>🏆 Melhores lojas de eletrônicos</h3>
-                <p>Ranking atualizado.</p>
-                <a href="blog/index.html" class="btn-lead">Ler mais</a>
+                <p>Ranking atualizado das lojas mais confiáveis em Ciudad del Este.</p>
+                <a href="blog/index.html" class="btn-lead">Ler mais →</a>
             </div>
             <div class="artigo-card">
+                <span class="artigo-data">📅 25/03/2026</span>
                 <h3>📈 Para Revendedores</h3>
-                <p>Guia completo de margens e lucros.</p>
-                <a href="blog/para-revendedores.html" class="btn-lead">Ler mais</a>
+                <p>Guia completo de margens e lucros para quem quer revender produtos do PY.</p>
+                <a href="blog/para-revendedores.html" class="btn-lead">Ler mais →</a>
+            </div>
+        </div>
+
+        <!-- CALLL-TO-ACTION VIP -->
+        <div class="cta-vip">
+            <div class="cta-vip-content">
+                <i class="fas fa-crown"></i>
+                <h3>🔥 Grupo VIP com ofertas exclusivas</h3>
+                <p>Receba cotações em tempo real, ofertas relâmpago e cupons de desconto direto no WhatsApp!</p>
+                <button class="btn-vip-grande" onclick="window.location.href='vip.html'">QUERO SER VIP →</button>
             </div>
         </div>
     </div>
@@ -205,8 +316,44 @@
 
 <footer>
     <div class="container">
-        <p>© 2026 Bra-PY 24/7 - Todos os direitos reservados</p>
-        <p>📱 WhatsApp: +595 981 234 567</p>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4>Bra-PY 24/7</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="vip.html">Grupo VIP</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Ferramentas</h4>
+                <ul>
+                    <li><a href="cambio.html">Conversor de Moedas</a></li>
+                    <li><a href="precos.html">Tabela de Preços</a></li>
+                    <li><a href="compras.html">Guia de Compras</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul>
+                    <li><a href="https://wa.me/595981234567" target="_blank">WhatsApp</a></li>
+                    <li><a href="mailto:contato@brapy24.com">E-mail</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Siga-nos</h4>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>© 2026 Bra-PY 24/7 - Todos os direitos reservados</p>
+            <p>📱 WhatsApp: +595 981 234 567</p>
+        </div>
     </div>
 </footer>
 
